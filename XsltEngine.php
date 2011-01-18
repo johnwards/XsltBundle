@@ -83,7 +83,7 @@ class XsltEngine implements EngineInterface
             $attr->appendChild($dom->createTextNode($value));
             $dom->documentElement->appendChild($attr);
         }
-        
+
         // Routes
         $routes = $dom->createElement('routes');
         $dom->documentElement->appendChild($routes);

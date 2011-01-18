@@ -36,4 +36,16 @@ Usage
 
 Create an XSLT file in your views folder. Then in your controller simply call:
 
-    return $this->render('HelloBundle:Hello:index.xslt.html', array('name' => $name));
+    return $this->render('HelloBundle:Hello:index.xsl.html', array('name' => $name));
+
+Extensions
+==========
+
+Extension can be used to add global data to the XML or to register PHP function callbacks.
+
+This bundle already includes different extensions. To use them, use this in your application config:
+
+        # app/config/config.yml
+        xslt.config:
+             extensions: [xslt.extension.environment, xslt.extension.routes, xslt.extension.debug]
+
